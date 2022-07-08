@@ -3,7 +3,7 @@ body {
   background-color: darkgray;
   display: grid;
   place-items: center;
-  padding: 0 15px;
+  padding: 20px;
 }
 body ul {
   padding: 0;
@@ -28,6 +28,14 @@ img {
   -o-object-fit: unset;
      object-fit: unset;
   border-radius: 4px;
+  flex-grow: 1;
+}
+
+a {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: black;
 }
 
 .container {
@@ -40,10 +48,22 @@ img {
 
 .container-title {
   font-family: "Montserrat", sans-serif;
-  font-size: 50px;
+  font-size: 25px;
   letter-spacing: 0.03em;
   text-align: center;
-  padding: 50px 0;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 450px) {
+  .container-title {
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container-title {
+    font-size: 50px;
+    margin-bottom: 50px;
+  }
 }
 
 .container-item {

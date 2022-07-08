@@ -3,7 +3,7 @@ body {
   background-color: darkgray;
   display: grid;
   place-items: center;
-  padding: 0 15px;
+  padding: 20px;
   ul {
     padding: 0;
     margin: 0;
@@ -27,6 +27,13 @@ img {
   height: 150px;
   object-fit: unset;
   border-radius: 4px;
+  flex-grow: 1;
+}
+a {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: black;
 }
 
 .container {
@@ -39,10 +46,19 @@ img {
 
 .container-title {
   font-family: "Montserrat", sans-serif;
-  font-size: 50px;
+
+  font-size: 25px;
   letter-spacing: 0.03em;
   text-align: center;
-  padding: 50px 0;
+  margin-bottom: 20px;
+  @media screen and(min-width:450px) {
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+  @media screen and(min-width:1200px) {
+    font-size: 50px;
+    margin-bottom: 50px;
+  }
 }
 
 .container-item {
@@ -67,7 +83,7 @@ img {
   transform: translatey(-100%);
   visibility: visible;
 
-  transition: transform 400ms  cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
   .container-item:hover & {
     transform: translateY(47%);
   }
@@ -100,7 +116,6 @@ img {
     }
   }
 }
-
 
 @media screen and (min-width: 400px) {
   .container {
